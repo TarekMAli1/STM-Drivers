@@ -1,7 +1,0 @@
-#include "SPI_Interface.h"
-#include "STD_TYPES.h"
-#include "BIT_MATH.h"
-
-void main(){
-
-}
