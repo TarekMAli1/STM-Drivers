@@ -1,0 +1,12 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Project Debug,org.eclipse.launchbar.core.descriptorType.default\:Blynking.elf,org.eclipse.launchbar.core.descriptorType.default\:Blynking Debug,org.eclipse.launchbar.core.descriptorType.default\:Led.elf,org.eclipse.launchbar.core.descriptorType.default\:DAC Project.elf,org.eclipse.launchbar.core.descriptorType.default\:DAC Project Debug,org.eclipse.launchbar.core.descriptorType.default\:Led Debug,org.eclipse.launchbar.core.descriptorType.default\:IR Debug,org.eclipse.launchbar.core.descriptorType.default\:newIR Debug
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:Blynking\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:Blynking\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:Blynking.elf/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:IR\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:IR.elf/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Led\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:Project\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:Project\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

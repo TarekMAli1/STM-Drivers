@@ -1,0 +1,67 @@
+10:32:52 **** Incremental Build of configuration Debug for project GPIO ****
+make all 
+Building file: D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_Program.c
+Invoking: Cross ARM GNU C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DOS_USE_SEMIHOSTING -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/GPIO_Program.d" -MT"src/GPIO_Program.d" -c -o "src/GPIO_Program.o" "D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_Program.c"
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_Program.c: In function 'SetPinValue':
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_Program.c:67:52: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+    if(value == LOW_LEVEL )  GPIOA->BSRR=(value<<pin+16);
+                                                 ~~~^~~
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_Program.c:71:52: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+    if(value == LOW_LEVEL )  GPIOB->BSRR=(value<<pin+16);
+                                                 ~~~^~~
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_Program.c:75:52: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+    if(value == LOW_LEVEL )  GPIOC->BSRR=(value<<pin+16);
+                                                 ~~~^~~
+Finished building: D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_Program.c
+ 
+Building file: D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_config.c
+Invoking: Cross ARM GNU C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DOS_USE_SEMIHOSTING -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/GPIO_config.d" -MT"src/GPIO_config.d" -c -o "src/GPIO_config.o" "D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_config.c"
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_config.c:11:4: error: 'pinInfo {aka struct <anonymous>}' has no member named 'Ports'
+   .Ports  =PORTA,
+    ^~~~~
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_config.c:12:4: error: 'pinInfo {aka struct <anonymous>}' has no member named 'Pins'
+   .Pins   =PIN0,
+    ^~~~
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_config.c:13:4: error: 'pinInfo {aka struct <anonymous>}' has no member named 'Modes'
+   .Modes  =OUTPUT,
+    ^~~~~
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_config.c:14:4: error: 'pinInfo {aka struct <anonymous>}' has no member named 'OTypes'
+   .OTypes =PUSH_PULL,
+    ^~~~~~
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_config.c:15:4: error: 'pinInfo {aka struct <anonymous>}' has no member named 'OSpeeds'
+   .OSpeeds =LOW,
+    ^~~~~~~
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_config.c:16:4: error: 'pinInfo {aka struct <anonymous>}' has no member named 'PullModes'
+   .PullModes =NOT_USED
+    ^~~~~~~~~
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_config.c:19:5: error: 'pinInfo {aka struct <anonymous>}' has no member named 'Ports'
+    .Ports =PORTB,
+     ^~~~~
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_config.c:20:5: error: 'pinInfo {aka struct <anonymous>}' has no member named 'Pins'
+    .Pins  =PIN9,
+     ^~~~
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_config.c:21:5: error: 'pinInfo {aka struct <anonymous>}' has no member named 'Modes'
+    .Modes =INPUT,
+     ^~~~~
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_config.c:22:5: error: 'pinInfo {aka struct <anonymous>}' has no member named 'OTypes'
+    .OTypes =NOT_USED,
+     ^~~~~~
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_config.c:23:5: error: 'pinInfo {aka struct <anonymous>}' has no member named 'OSpeeds'
+    .OSpeeds =NOT_USED,
+     ^~~~~~~
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_config.c:24:5: error: 'pinInfo {aka struct <anonymous>}' has no member named 'PullModes'
+    .PullModes=FLOATING},
+     ^~~~~~~~~
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_config.c:34:2: error: conflicting types for 'pinInfo'
+ }pinInfo;
+  ^~~~~~~
+In file included from D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_config.c:6:0:
+D:/engineering/Arm IMT/project/02-MCAL/02-GPIO/GPIO_config.h:23:2: note: previous declaration of 'pinInfo' was here
+ }pinInfo;
+  ^~~~~~~
+make: *** [src/subdir.mk:42: src/GPIO_config.o] Error 1
+
+10:32:55 Build Finished (took 2s.609ms)
+

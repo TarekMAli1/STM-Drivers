@@ -1,0 +1,14 @@
+#include "SPI_Private.h"
+#include "SPI_Interface.h"
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "ERROR_STATUS.h"
+
+
+void SPI_Init(void){
+	SPI1->CR1=0x0347;
+}
+void SPI_Transmit(u16 data){
+	SPI1->DR=data;
+	while(GET_BIT(SPI1->SR,7)==1);
+}

@@ -1,0 +1,11 @@
+12:54:10 **** Incremental Build of configuration Debug for project DAC Project ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "DAC Project.elf"
+   text	   data	    bss	    dec	    hex	filename
+   8834	  56480	    700	  66014	  101de	DAC Project.elf
+Finished building: DAC Project.siz
+ 
+
+12:54:10 Build Finished (took 297ms)
+

@@ -1,0 +1,10 @@
+#include "SPI_Interface.h"
+#include ""
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+
+void main(){
+	SetPinMode();
+	SPI_Init();
+
+}

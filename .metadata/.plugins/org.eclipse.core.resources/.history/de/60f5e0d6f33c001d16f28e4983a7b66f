@@ -1,0 +1,47 @@
+#ifndef 	USART_CONFIG_H
+#define 	USART_CONFIG_H
+
+#define USART_BASEADDRESS  0x40011000
+typedef struct
+{
+	union
+	{
+		u32 REGISTER;
+		struct
+		{
+			u32 PE:1;
+			u32 FE:1;
+			u32 NF:1;
+			u32 ORE:1;
+			u32 IDLE:1;
+			u32 RXNE:1;
+			u32 TC:1;
+			u32 TXE:1;
+			u32 LBD:1;
+			u32 CTC:1;
+		}BIT;
+	}SR;
+	u32 DR;
+	union
+	{
+		u32 REGISTER;
+		struct
+		{
+			u32 DIVFraction:4;
+			u32 Mantissa:12;
+		}BIT;
+	}BRR;
+	union
+	{
+		u32 REGISTER;
+		struct
+		{
+			u32 DIVFraction:4;
+			u32 Mantissa:12;
+		}BIT;
+	}CR1;
+}SPI_t;
+
+
+
+#endif

@@ -1,0 +1,9 @@
+STK_CTRL 
+bit0=> enable timer and load counter with value in the load reg and count down on reaching 0 flag bit16 become 1  
+bit1=> on reaching 0 the interrupt enabled
+bit2=> 0=> ahb/8,1=>AHB
+bit16=> COUNTFLAG
+STK_LOAD
+24 bit to load the value of counter 
+STK_VAL
+

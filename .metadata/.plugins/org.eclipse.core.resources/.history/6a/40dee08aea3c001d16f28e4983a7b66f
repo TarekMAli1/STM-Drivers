@@ -1,0 +1,53 @@
+#include "GPIO_Interface.h"
+#include "SYSTICK_Interface.h"
+#include "SPI_Interface.h"
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "TFT_Config.h"
+#include "TFT_Interface.h"
+#include "Imagedata.h"
+void TFT_Init(){
+	SetPinValue(PORTA,RST,HIGH_LEVEL);
+	SYSTICK_Delay_Microsecond(100);
+	SetPinValue(PORTA,RST,LOW_LEVEL);
+	SYSTICK_Delay_Microsecond(1);
+	SetPinValue(PORTA,RST,HIGH_LEVEL);
+	SYSTICK_Delay_Microsecond(100);
+	SetPinValue(PORTA,RST,LOW_LEVEL);
+	SYSTICK_Delay_Microsecond(100);
+	SetPinValue(PORTA,RST,HIGH_LEVEL);
+	SYSTICK_Delay_Microsecond(120);
+    voidWriteCommand(0x11);
+	SYSTICK_Delay_Millisecond(150);
+	voidWriteCommand(0x3A);
+	voidWriteData(0x05);
+	voidWriteCommand(0x29);
+}
+
+void TFT_DislpayImage(void){
+		//Configure X AXIS
+		WriteCommand(0x2A);
+		WriteData(0);
+		WriteData(0);
+		WriteData(0);
+		WriteData(127);
+
+		//Configure Y AXIS
+		WriteCommand(0x2B);
+		WriteData(0);
+		WriteData(0);
+		WriteData(0);
+		WriteData(159);
+}
+
+void WriteCommand(u8 Command) /*A0 is 0*/
+{
+	SetPinValue(PORTA,A0,LOW_LEVEL);
+	SPI_Transmit(Command);
+}
+
+void WriteData(u8 Data) /*A0 is 1*/
+{
+	SetPinValue(PORTA,A0,HIGH_LEVEL);
+	SPI_Transmit(Data);
+}
